@@ -1,6 +1,6 @@
 # Portfolio — Julio Fernandes
 
-Live: https://non-s.github.io/portfolio
+Live: https://non-s.github.io/Portfolio
 
 ## What it is
 
