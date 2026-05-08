@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julio Fernandes | Engenheiro de Software</title>
-    <meta name="description" content="Portóflio de Julio Fernandes — Engenheiro de Software com foco em desenvolvimento web, sistemas distribuídos e redes. Projetos em HTML/CSS/JS puro.">
+    <meta name="description" content="Portfólio de Julio Fernandes — Engenheiro de Software com foco em desenvolvimento web, sistemas distribuídos e redes. Projetos em HTML/CSS/JS puro.">
     <meta property="og:title" content="Julio Fernandes | Engenheiro de Software">
     <meta property="og:description" content="Engenheiro de Software · Instrutor de TI · Web · Sistemas Distribuídos · Redes">
     <meta property="og:type" content="website">
@@ -48,7 +48,7 @@
             </div>
             <div class="terminal-body">
                 <div class="terminal-line">
-                    <span class="t-prompt">┌──(non-s㋟root)-[~]</span>
+                    <span class="t-prompt">┌──(non-s㉿root)-[~]</span>
                 </div>
                 <div class="terminal-line">
                     <span class="t-prompt">└─$</span>
@@ -393,6 +393,18 @@
                 <i class="fas fa-arrow-right cc-arrow"></i>
             </a>
         </div>
+
+        <form class="contact-form fade-in" id="contactForm" novalidate>
+            <div class="cf-row">
+                <input class="cf-input" id="cfNome" type="text" placeholder="Seu nome" required>
+                <input class="cf-input" id="cfEmail" type="email" placeholder="Seu e-mail (opcional)">
+            </div>
+            <textarea class="cf-input" id="cfMsg" rows="5" placeholder="Sua mensagem..." required></textarea>
+            <button class="btn btn-primary cf-btn" id="cfBtn" type="submit">
+                <i class="fas fa-paper-plane"></i> Enviar Mensagem
+            </button>
+            <p class="cf-status" id="cfStatus"></p>
+        </form>
     </div>
 </section>
 
@@ -407,6 +419,7 @@
     </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="script.js"></script>
 </body>
 </html>
