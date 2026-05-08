@@ -147,7 +147,7 @@ if (skillsGrid) skillObserver.observe(skillsGrid);
 document.querySelectorAll('.btn-dl').forEach(btn => {
     btn.addEventListener('click', function () {
         const original = this.innerHTML;
-        this.innerHTML = '<i class="fas fa-external-link-alt"></i> Abrindo...';
+        this.innerHTML = '<i class="fas fa-external-link-alt"></i> Opening...';
         setTimeout(() => { this.innerHTML = original; }, 1200);
     });
 });
