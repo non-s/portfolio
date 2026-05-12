@@ -220,7 +220,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async e => {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
     status.textContent = '';
     status.className = 'cf-status';
-    const { error } = await sbPortfolio.from('mensagens').insert({ nome, email, mensagem });
+    const { error } = await sbPortfolio.from('portfolio_mensagens').insert({ nome, email, mensagem });
     if (error) {
         status.textContent = 'Erro ao enviar. Tente novamente.';
         status.className = 'cf-status error';
@@ -295,7 +295,7 @@ document.querySelectorAll('.btn-dl').forEach(btn => {
     }
 
     const { data, error } = await sbPortfolio
-        .from('mensagens')
+        .from('portfolio_mensagens')
         .select('*')
         .order('created_at', { ascending: false });
 
