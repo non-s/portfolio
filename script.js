@@ -32,7 +32,7 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener('resize', () => { resizeCanvas(); initMatrix(); });
 
-const CHARS    = '01アイウエオカキクケコサシスセソタチツテトABCDEFGHIJKLMNOP';
+const CHARS    = '01ã¢ã¤ã¦ã¨ãªã«ã­ã¯ã±ã³ãµã·ã¹ã»ã½ã¿ããããABCDEFGHIJKLMNOP';
 const FONT_SIZE = 13;
 let columns, drops;
 
@@ -141,7 +141,7 @@ navLinks.querySelectorAll('a').forEach(a => {
 });
 
 /* =============================================
-   INTERSECTION OBSERVER — fade-in
+   INTERSECTION OBSERVER â fade-in
    ============================================= */
 const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -220,7 +220,7 @@ function showToast(msg, type = 'info') {
 }
 
 /* =============================================
-   SUPABASE — CONTACT FORM
+   SUPABASE â CONTACT FORM
    ============================================= */
 const SUPABASE_URL      = 'https://bvquyfzllqnbfxncsacn.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2cXV5ZnpsbHFuYmZ4bmNzYWNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgxODU1MzQsImV4cCI6MjA5Mzc2MTUzNH0.xa_rs4bVLoTv58P7U8rDOaPjo1Dqt60q8cR-IWFpbug';
@@ -235,7 +235,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async e => {
     const btn      = document.getElementById('cfBtn');
     const status   = document.getElementById('cfStatus');
     if (!nome || !mensagem) {
-        status.textContent = 'Nome e mensagem são obrigatórios.';
+        status.textContent = 'Nome e mensagem sÃ£o obrigatÃ³rios.';
         status.className = 'cf-status error';
         return;
     }
@@ -250,7 +250,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async e => {
         btn.disabled = false;
         btn.innerHTML = '<i class="fas fa-paper-plane"></i> Enviar Mensagem';
     } else {
-        status.textContent = '✓ Mensagem enviada! Responderei em breve.';
+        status.textContent = 'â Mensagem enviada! Responderei em breve.';
         status.className = 'cf-status';
         e.target.reset();
         btn.innerHTML = '<i class="fas fa-check"></i> Enviado!';
@@ -260,6 +260,7 @@ document.getElementById('contactForm')?.addEventListener('submit', async e => {
             status.textContent = '';
         }, 3500);
     }
+  } catch(err) { handleError(err, 'contactForm'); }
 });
 
 /* =============================================
@@ -287,9 +288,9 @@ document.querySelectorAll('.btn-dl').forEach(btn => {
 });
 
 /* =============================================
-   ADMIN PANEL — mensagens recebidas
-   Acesso: adicione ?admin à URL
-   SQL necessário no Supabase:
+   ADMIN PANEL â mensagens recebidas
+   Acesso: adicione ?admin Ã  URL
+   SQL necessÃ¡rio no Supabase:
      CREATE POLICY "mensagens_select" ON mensagens FOR SELECT USING (true);
    ============================================= */
 (async function initAdminPanel() {
